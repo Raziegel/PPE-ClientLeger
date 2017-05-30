@@ -1,0 +1,13 @@
+<ion-view view-title="Sondages">
+  <ion-content>
+    <div class="list social-list">
+      <a class="item  item-text-wrap animated pulse" ng-href="{{item.url}}" target="_blank" ng-style="{'background': item.BColor}" ng-repeat="item in items track by $index">
+
+        <h2  class="animated zoomIn" ng-style="{'color': item.color}">{{item.title}}
+
+        </h2>
+        <p class="animated zoomIn" ng-bind-html="item.description"></p>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

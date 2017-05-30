@@ -1,0 +1,20 @@
+<ion-view view-title="Questions">
+  <ion-content >
+    Question {{items.id}} //  ttitre ""{{ items.title}}"
+
+    <div class="list social-list">
+          <a class="item item-text-wrap animated pulse" ng-repeat="item in items.questions track by $index">
+            <h4> {{item.intitule}}</h4>
+            <div class="list ">
+              <ion-radio ng-repeat="ita in item.Reponses track by $index"
+                         ng-value="ita.texte"
+                         ng-model="data.clientSide">
+                {{ ita.texte }}
+              </ion-radio>
+          </div>
+          </a>
+
+          </div>
+
+  </ion-content>
+</ion-view>

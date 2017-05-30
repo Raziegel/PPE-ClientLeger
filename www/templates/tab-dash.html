@@ -1,0 +1,61 @@
+<ion-view view-title="Accueil">
+  <ion-content>
+
+    <div class="dashboard-main-container animated bounceInDown">
+      <h3>E<span class="thin">co</span><b>S</b>tat</h3>
+
+      <ion-slide-box on-slide-changed="slideHasChanged($index)">
+
+        <ion-slide>
+          <div class="box">
+            <h4 class="calm"><b>Enquêtes</b> en temps<span class="thin"> réel</span></h4>
+            <p><b>Participez à des séquences d'enquêtes de grandes ampleur</b></p>
+          </div>
+        </ion-slide>
+
+
+        <ion-slide>
+          <div class="box">
+            <h4 class="assertive"> <b>Sondages</b> ponctuels</h4>
+            <p><b>Donnez votre avis grace à des sondages sur différents thèmes</b> </p>
+          </div>
+        </ion-slide>
+
+        <ion-slide>
+          <div class="box">
+            <h4 class="balanced"> <b>Quizz </b>ludiques</h4>
+            <p> <b>Répondez à des quizz innovants</b></p>
+          </div>
+        </ion-slide>
+
+      </ion-slide-box>
+
+    </div>
+    <p><b>Réponses du dernier questionnaire auquel vous avez participé:</b></p>
+    <div class="card chart-card">
+
+      <div class="item item-text-wrap">
+        <span class="span dark"><b>Doughnut</b></span>
+        <canvas id="doughnut" data="pieData" labels="pieLabels" class="chart chart-doughnut" legend="true" series="series" options="{showTooltips: true}">
+        </canvas>
+      </div>
+      <div class="item item-text-wrap">
+        <span class="span dark"><b>Radar</b></span>
+        <canvas id="radar" class="chart chart-radar" data="lineData" labels="lineLabels" legend="true" series="lineSeries" options="{showTooltips: true}"></canvas>
+      </canvas>
+      </div>
+      <div class="item item-text-wrap">
+        <span class="span dark"><b>Barres</b></span>
+        <canvas id="bar" class="chart chart-bar" data="lineData" labels="lineLabels" legend="true" series="lineSeries" options="{showTooltips: true}"></canvas>
+      </canvas>
+      </div>
+      <div class="item item-text-wrap">
+        <span class="span dark"><b>Lignes</b></span>
+        <canvas id="line" class="chart chart-line" data="lineData" labels="lineLabels" legend="true" series="lineSeries" options="{showTooltips: true}"></canvas>
+      </div>
+
+
+    </div>
+
+  </ion-content>
+</ion-view>

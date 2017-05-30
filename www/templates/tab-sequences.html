@@ -1,0 +1,14 @@
+<ion-view view-title="Sequences ">
+  <ion-content ng-controller="sequenceActionCtrl">
+    <div class="list social-list">
+      <a href="#/tab/questions/{{item.id}}" ng-click="questions({{items.id}}, {{item.id}})"class="item  item-text-wrap animated pulse"  ng-style="{'background': item.BColor}" ng-repeat="item in items.sequences track by $index">
+
+        <h2  class="animated zoomIn" ng-style="{'color': item.color}">{{item.title}}
+          <span class="notify pull-right animated rubberBand" ng-style="{'background': item.color}">{{item.sequences[1].title}}</span>
+        </h2>
+        <p class="animated zoomIn" ng-bind-html="item.description"></p>
+      </a>
+    </div>
+
+  </ion-content>
+</ion-view>
