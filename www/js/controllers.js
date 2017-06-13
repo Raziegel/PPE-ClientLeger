@@ -67,12 +67,18 @@ angular.module('starter.controllers', [])
   })
 
   .controller('sequencesCtrl', function($scope, enquetes, $stateParams) {
-    console.log("seq ok")
+
     $scope.items = enquetes.get($stateParams.enquete);
 
   })
   .controller('questionsCtrl', function($scope, sequences, $stateParams) {
-    console.log("ques ok")
+
     $scope.items = sequences.get($stateParams.enquete, $stateParams.sequence);
 
-  });
+  })
+  .controller('questionsActCtrl', function($scope, sequences, $stateParams) {
+
+
+
+  })
+  ;
