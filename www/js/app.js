@@ -102,7 +102,7 @@ angular.module('starter', ['ionic', 'chart.js', 'starter.controllers', 'starter.
       }
     }
   })
-  
+
   .state('tab.quizz', {
     url: '/quizz',
     views: {

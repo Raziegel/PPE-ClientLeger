@@ -78,7 +78,24 @@ angular.module('starter.controllers', [])
   })
   .controller('questionsActCtrl', function($scope, sequences, $stateParams) {
 
+    var tab = [ ];
+    var longueurTab= 0;
 
+    $scope.Selection = function(idquestion, valeurReponse, vara){
+      tab[idquestion - 1] = valeurReponse;
+      console.log(vara);
+      longueurTab = vara;
+      console.log(tab);
+    };
 
-  })
-  ;
+    $scope.Soummission = function() {
+    // verif si toutes les cases ont été cochées
+      if (tab.length === longueurTab) {
+        console.log("ok");
+        // TODO JSON + renvoi vers la pages d'enquetes
+      }else {
+        console.log("ko");
+        //TODO afficher une popup
+      }
+  };
+});
