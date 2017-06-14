@@ -58,7 +58,14 @@ angular.module('starter.controllers', [])
        enquete: enqueteID,
       sequence: sequenceID
     });
-      console.log("detail ok");
+
+    };
+    $scope.reponses = function(enqueteID, sequenceID) {
+     $state.go('tab.reponses', {
+       enquete: enqueteID,
+      sequence: sequenceID
+    });
+
     };
   })
 
@@ -75,6 +82,38 @@ angular.module('starter.controllers', [])
 
     $scope.items = sequences.get($stateParams.enquete, $stateParams.sequence);
 
+  })
+  .controller('reponsesCtrl', function($scope, sequences, $stateParams) {
+
+    $scope.items = sequences.get($stateParams.enquete, $stateParams.sequence);
+    // --------------------- Pie Chart Configuration -----------------------------
+    var lab = [];
+    $scope.labels = [];
+    console.log("ok");
+    console.log($scope.items);
+    for (var i = 0; i < $scope.items.questions.length; i++) {
+      console.log(i);
+      for (var j = 0; j < $scope.items.questions[i].Reponses.length; j++) {
+        console.log(j);
+          console.log($scope.items.questions[i].Reponses[j].texte);
+          lab.push($scope.items.questions[i].Reponses[j].texte);
+      }
+      $scope.labels.push(lab);
+      lab = [];
+      console.log($scope.labels);
+    }
+    $scope.label = $scope.labels[0];
+    console.log($scope.label);
+
+    $scope.Data = [500, 500, 600, 500];
+
+    // --------------------- Line Chart Configuration ----------------------------
+    $scope.lineSeries = ['Active', 'Inactive'];
+    $scope.lineLabels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"];
+    $scope.lineData = [
+      [65, 59, 80, 81, 56, 55, 40],
+      [28, 48, 40, 19, 86, 27, 90]
+    ];
   })
   .controller('questionsActCtrl', function($scope, sequences, $stateParams) {
 

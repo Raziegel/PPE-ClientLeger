@@ -143,7 +143,7 @@ angular.module('starter.services', [])
 
     return {
       all: function() {
-        console.log("quizz")
+      
         return quizz;
       },
     };

@@ -1,0 +1,22 @@
+<ion-view view-title="Réponses">
+  <ion-content>
+    <div class="card chart-card" ng-repeat="item in items.questions track by $index">
+    <h3 class="balanced"> Résultats pour la question : <br> {{ item.intitule}}</h3>
+      <div class="item item-text-wrap">
+        <span class="span dark"><b>Doughnut</b></span>
+        <canvas id="doughnut" data="Data" labels="labels[ item.id - 1 ]" class="chart chart-doughnut" legend="true" series="series" options="{showTooltips: true}">
+        </canvas>
+      </div>
+
+      <div class="item item-text-wrap">
+        <span class="span dark"><b>Barres</b></span>
+        <canvas id="bar" class="chart chart-bar" data="lineData" labels="lineLabels" legend="true" series="lineSeries" options="{showTooltips: true}"></canvas>
+      </canvas>
+      </div>
+
+
+
+    </div>
+
+  </ion-content>
+</ion-view>

@@ -102,7 +102,19 @@ angular.module('starter', ['ionic', 'chart.js', 'starter.controllers', 'starter.
       }
     }
   })
-
+  .state('tab.reponses', {
+    url: '/reponses/:enquete',
+    params : {
+      enquete: null,
+      sequence: null
+    },
+    views: {
+      'tab-enquetes': {
+        templateUrl: 'templates/tab-reponses.html',
+        controller: 'reponsesCtrl'
+      }
+    }
+  })
   .state('tab.quizz', {
     url: '/quizz',
     views: {
