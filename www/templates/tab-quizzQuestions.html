@@ -1,0 +1,20 @@
+<ion-view view-title="Questions">
+  <ion-content ng-controller="questionsActCtrl" >
+    <h2>{{ items.title}}</h2>
+           <img src="{{items.image}}" width="70" height="70">
+          <ion-list class="item item-text-wrap animated pulse" ng-repeat="item in items.questions track by $index">
+            <h3> {{item.intitule}}</h3>
+
+          <ion-radio ng-repeat="unit in item.Reponses track by $index"
+                     ng-value="unit.texte"
+                     ng-change="Selection(item.id, unit.texte, items.questions.length)"
+                     ng-model="unitChoice" name="{{item.id}}">
+            {{ unit.texte }}
+          </ion-radio>
+
+        </ion-list>
+          <button  ng-click="Soummission()" class="button button-block button-calm"> Soumettre</button>
+
+
+  </ion-content>
+</ion-view>

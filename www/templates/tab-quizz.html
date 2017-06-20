@@ -1,12 +1,17 @@
 <ion-view view-title="Quizz">
   <ion-content>
     <div class="list social-list">
-      <a class="item  item-text-wrap animated pulse" ng-href="{{item.url}}" target="_blank" ng-style="{'background': item.BColor}" ng-repeat="item in items track by $index">
+      <a class="item  item-text-wrap animated pulse" href="#/tab/questions3/{{item.id}}" ng-style="{'background': item.BColor}" ng-repeat="item in items track by $index">
 
         <h2  class="animated zoomIn" ng-style="{'color': item.color}">{{item.title}}
           <span class="notify pull-right animated rubberBand" ng-style="{'background': item.color}"></span>
         </h2>
         <p class="animated zoomIn" ng-bind-html="item.description"></p>
+      </a>
+      <a href="#/tab/reponses3/{{item.id}}"  class="item  item-text-wrap animated pulse" style="background-color : silver;"   ng-repeat="item in items track by $index">
+
+        <h2  class="animated zoomIn" > Résultats {{item.title}}</h2>
+
       </a>
     </div>
   </ion-content>

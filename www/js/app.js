@@ -102,6 +102,15 @@ angular.module('starter', ['ionic', 'chart.js', 'starter.controllers', 'starter.
       }
     }
   })
+  .state('tab.questions2', {
+    url: '/questions2/:sondage',
+    views: {
+      'tab-sondages': {
+        templateUrl: 'templates/tab-questions.html',
+        controller: 'questions2Ctrl'
+      }
+    }
+  })
   .state('tab.reponses', {
     url: '/reponses/:enquete',
     params : {
@@ -112,6 +121,33 @@ angular.module('starter', ['ionic', 'chart.js', 'starter.controllers', 'starter.
       'tab-enquetes': {
         templateUrl: 'templates/tab-reponses.html',
         controller: 'reponsesCtrl'
+      }
+    }
+  })
+  .state('tab.reponses2', {
+    url: '/reponses2/:sondage',
+    views: {
+      'tab-sondages': {
+        templateUrl: 'templates/tab-reponses.html',
+        controller: 'reponses2Ctrl'
+      }
+    }
+  })
+  .state('tab.reponses3', {
+    url: '/reponses3/:quizz',
+    views: {
+      'tab-quizz': {
+        templateUrl: 'templates/tab-quizzReponses.html',
+        controller: 'reponses3Ctrl'
+      }
+    }
+  })
+  .state('tab.questions3', {
+    url: '/questions3/:quizz',
+    views: {
+      'tab-quizz': {
+        templateUrl: 'templates/tab-quizzQuestions.html',
+        controller: 'questions3Ctrl'
       }
     }
   })

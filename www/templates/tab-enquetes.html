@@ -4,7 +4,7 @@
       <a href="#/tab/sequences/{{item.id}}" class="item  item-text-wrap animated pulse"  ng-style="{'background': item.BColor}" ng-repeat="item in items track by $index">
 
         <h2  class="animated zoomIn" ng-style="{'color': item.color}">{{item.title}}
-          <span class="notify pull-right animated rubberBand" ng-style="{'background': item.color}">{{item.sequences[1].title}}</span>
+          <span class="notify pull-right animated rubberBand" ng-style="{'background': item.color}">{{enquetesLenghts[item.id -1]}}</span>
         </h2>
         <p class="animated zoomIn" ng-bind-html="item.description"></p>
       </a>
